@@ -40,15 +40,16 @@
                 <div class="panel-heading">Liste des Stages</div>
                 <div class="panel-body">
 
-                    <TABLE BORDER="1">
-                        <TR>
-                            <TH> Numero</TH>
-                            <TH> Libellé</TH>
-                            <TH> Date début</TH>
-                            <TH> Date fin</TH>
-                            <TH>Nombre de places</TH>
-                            <TH>Nombre d'inscrits</TH>
-                        </TR>
+                    <table class="table table-condensed table-striped table-bordered">
+                        <tr>
+                            <th> Numero</th>
+                            <th> Libellé</th>
+                            <th> Date début</th>
+                            <th> Date fin</th>
+                            <th>Nombre de places</th>
+                            <th>Nombre d'inscrits</th>
+                            <th>Options</th>
+                        </tr>
 
                         <c:forEach items="${liste}" var="item">
                             <tr>
@@ -65,10 +66,14 @@
 
                                 <td>${item.nbplaces}</td>
                                 <td>${item.nbinscrits}</td>
-
+                                <td>
+                                    <!-- TODO Gérer fonctionnel derrière  les boutons -->
+                                    <button type="button" class="btn btn-info">Modifier</button>
+                                    <button type="button" class="btn btn-danger">Supprimer</button>
+                                </td>
                             </tr>
                         </c:forEach>
-                    </TABLE>
+                    </table>
                 </div>
             </div>
         </div>
