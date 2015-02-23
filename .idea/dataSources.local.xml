@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="DSstages" uuid="fd18a5e5-82a7-4828-87d3-7b612cba57fd">
+      <secret-storage>master_key</secret-storage>
+      <user-name>epul</user-name>
+      <schema-pattern>messtages.*</schema-pattern>
+      <default-schemas>messtages.*</default-schemas>
+    </data-source>
+  </component>
+</project>
