@@ -5,7 +5,7 @@
     <Resource name="jdbc/MesStages"
               auth="Container"
               type="javax.sql.DataSource"
-              username="epul"
+              username="userepul"
               password="epul"
               driverClassName="com.mysql.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/MesStages"
