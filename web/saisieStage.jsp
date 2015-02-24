@@ -377,6 +377,9 @@
                 culture: 'fr' // change to specific culture
             }
         });
+
+        $('#DateFin').datepicker('setDate', new Date(${stage.getDateFinToString()}));
+        $('#DateDebut').datepicker('setDate', new Date(${stage.getDateDebutToString()}));
     });
 </script>
 </body>

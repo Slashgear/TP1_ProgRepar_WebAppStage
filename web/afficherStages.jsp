@@ -68,7 +68,7 @@
                                 <td>${item.nbinscrits}</td>
                                 <td>
                                     <!-- TODO Gérer fonctionnel derrière  les boutons -->
-                                    <button type="button" class="btn btn-info">Modifier</button>
+                                    <a title="Supprimer" href="Controleur?action=modifierStage&id=${item.id}"><button type="button" class="btn btn-info">Modifier</button></a>
                                     <a title="Supprimer" href="Controleur?action=supprStage&id=${item.id}"><button type="button" class="btn btn-danger">Supprimer</button></a>
                                 </td>
                             </tr>
