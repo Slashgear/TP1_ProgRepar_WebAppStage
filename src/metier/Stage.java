@@ -181,4 +181,14 @@ public class Stage {
             throw e;
         }
     }
+
+    public void supprimerStage(int id) throws MonException {
+        String mysql ="DELETE FROM stages WHERE id="+id+";";
+        try {
+            DialogueBd.insertionBD(mysql);
+        } catch (MonException e) {
+            System.out.println(e.getMessage());
+            throw e;
+        }
+    }
 }

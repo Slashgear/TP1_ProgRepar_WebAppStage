@@ -69,7 +69,7 @@
                                 <td>
                                     <!-- TODO Gérer fonctionnel derrière  les boutons -->
                                     <button type="button" class="btn btn-info">Modifier</button>
-                                    <button type="button" class="btn btn-danger">Supprimer</button>
+                                    <a title="Supprimer" href="Controleur?action=supprStage&id=${item.id}"><button type="button" class="btn btn-danger">Supprimer</button></a>
                                 </td>
                             </tr>
                         </c:forEach>

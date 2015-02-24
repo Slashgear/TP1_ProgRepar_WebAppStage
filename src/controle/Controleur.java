@@ -26,7 +26,7 @@ public class Controleur extends HttpServlet
 	private static final String CHERCHER_STAGE = "chercheStage";
 	private static final String AJOUT_STAGE = "ajoutStage";
 	private static final String MODIFIER_STAGE = "modifierStage";
-    private static final String RECHERCHE = "rechercheStage";
+    private static final String SUPPRIMER_STAGE= "supprStage";
 	private static final String ERROR_PAGE = null;
 
 	// le format est une combinaison de MM dd yyyy avec / ou �
@@ -90,13 +90,25 @@ public class Controleur extends HttpServlet
 					
 				}
 				
-			}else if(RECHERCHE.equals(actionName)){
-                Stage unStage = new Stage();
-                if(request.getParameter("search") != null) {
-                    listeStages = unStage.recherche(request.getParameter("search"));
-                    request.setAttribute("liste", listeStages);
+			}else {
+                if (RECHERCHER_STAGE.equals(actionName)) {
+                    Stage unStage = new Stage();
+                    if (request.getParameter("search") != null) {
+                        listeStages = unStage.recherche(request.getParameter("search"));
+                        request.setAttribute("liste", listeStages);
+                    }
+                    destinationPage = "/afficherStages.jsp";
+                } else {
+                    if (SUPPRIMER_STAGE.equals(actionName)) {
+                        if (request.getParameter("id") != null) {
+                            Stage unStage = new Stage();
+                            unStage.supprimerStage(Integer.parseInt(request.getParameter("id")));
+                            listeStages=unStage.rechercheLesStages();
+                            request.setAttribute("liste", listeStages);
+                            destinationPage = "/afficherStages.jsp";
+                        }
+                    }
                 }
-                destinationPage = "/afficherStages.jsp";
             }
 			      // Redirection vers la page jsp appropriee
 	      RequestDispatcher dispatcher =getServletContext().getRequestDispatcher(destinationPage);
