@@ -42,9 +42,19 @@
             </button>
             <a class="navbar-brand" href="index.jsp">Gestion des Stages HIGH TECH</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-            </ul>
+        <div class="col-xs-4 pull-right">
+            <form class="navbar-form" role="form" method="post" action="Controleur?action=rechercheStage">
+                <div class="search input-group" role="search" id="mySearch">
+                    <input id="mySearchValue" type="search" class="form-control" name="search"
+                           placeholder="Rechercher un Stage"/>
+                              <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    <span class="sr-only">Rechercher un Stage</span>
+                                </button>
+                              </span>
+                </div>
+            </form>
         </div>
         <!--/.nav-collapse -->
     </div>
